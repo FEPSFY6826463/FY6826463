@@ -95,6 +95,34 @@
               }
         .ref4 { color: #000;
               }
+        #slide-container {
+            text-align: center;
+            position: relative;
+        }
+        .button-container {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            margin-bottom: -100px;
+        }
+        .button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 0 5px;
+        }
+        .slide-number-container {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            margin-bottom: -50px
+        }
     </style>
 </head>
 
@@ -180,6 +208,40 @@
     <div class="ref4" id="ref4">
         <a href="https://www.pearsonschoolsandfecolleges.co.uk/fe-vocational/subjects/science-fe-vocational/ocr-as-and-a-level-science-2015/ocr-a-level-physics-a-student-book-2-activebook-1"><p>O'Neill, M., 2015. <i>OCR A level Physics A.</i> 2nd ed. London: Pearson Education Limited .</p></a>
     </div>
+    <h2>Conference Presentation: Exploring the Boundaries of The Universe</h2>
+    <script>
+        var slideImages = ["slide1.jpg", "slide2.jpg", "slide3.jpg", "slide4.jpg", "slide5.jpg"];
+        var currentSlide =0 ;
+        function showSlide() {
+            document.getElementById('slide').src = slideImages[currentSlide];
+        }
+        function nextSlide() {
+            currentSlide=(currentSlide + 1) % slideImages.length;
+            showSlide();
+        }
+        function prevSlide() {
+            currentSlide= (currentSlide - 1 + slideImages.length) % slideImages.length;
+            showSlide();
+        }
+        function showSlideNumber(slideNumber) {
+            currentSlide = slideNumber - 1;
+            showSlide();
+        }
+            showSlide();
+    </script>
+    <div id="slide-container">
+        <img id="slide" src="slide1.jpg" alt="Slide 1" style="width 100%; max-width:800px;">
+        
+    </div>
+    <div class="button-container">
+        <button class="button" onclick="prevSlide()">Previous</button>
+        <button class="button" onclick="nextSlide()">Next</button> 
+    </div>
+    <div class="slide-number-container">
+        <button class="button" onclick="showSlideNumber(1)">1</button>
+        <button class="button" onclick="showSlideNumber(2)">2</button>
+        <button class="button" onclick="showSlideNumber(3)">3</button>
+        <button class="button" onclick="showSlideNumber(4)">4</button>
     </div>
 
 </body>
