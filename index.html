@@ -181,32 +181,40 @@
         <a href="https://www.pearsonschoolsandfecolleges.co.uk/fe-vocational/subjects/science-fe-vocational/ocr-as-and-a-level-science-2015/ocr-a-level-physics-a-student-book-2-activebook-1"><p>O'Neill, M., 2015. <i>OCR A level Physics A.</i> 2nd ed. London: Pearson Education Limited .</p></a>
     </div>
     <h2>Conference Presentation: Exploring the Boundaries of The Universe</h2>
-    <div id="slide-container">
+     <div id="slide-container">
         <img id="slide" src="slide1.jpg" alt="Slide 1" style="width: 100%; max-width: 800px;">
-    </div>
-    <div class="button-container">
-        <button class="button" onclick="prevSlide()">Previous</button>
-        <button class="button" onclick="nextSlide()">Next</button>
-    </div>
-     <div class="slide-number-container">
-        <button class="button" onclick="showSlideNumber(1)">1</button>
-        <button class="button" onclick="showSlideNumber(2)">2</button>
-        <button class="button" onclick="showSlideNumber(3)">3</button>
-        <button class="button" onclick="showSlideNumber(4)">4</button>
-        <button class="button" onclick="showSlideNumber(5)">5</button>
+        
+        <!-- Button container -->
+        <div class="button-container">
+            <button class="button" onclick="prevSlide()">Previous</button>
+            <button class="button" onclick="nextSlide()">Next</button>
+        </div>
+
+        <!-- Slide number container -->
+        <div class="slide-number-container">
+            <button class="button" onclick="showSlideNumber(1)">1</button>
+            <button class="button" onclick="showSlideNumber(2)">2</button>
+            <button class="button" onclick="showSlideNumber(3)">3</button>
+            <button class="button" onclick="showSlideNumber(4)">4</button>
+            <button class="button" onclick="showSlideNumber(5)">5</button>
+        </div>
     </div>
     <style>
+        /* Your existing styles */
+
         #slide-container {
             text-align: center;
             position: relative;
-            margin-top: 20px;
+            margin-top: 20px; /* Adjust as needed */
         }
+
         .button-container,
         .slide-number-container {
             position: absolute;
             bottom: 0;
             left: 50%;
             transform: translateX(-50%);
+            margin-top: 10px; /* Adjust as needed */
         }
 
         .button-container .button,
@@ -219,10 +227,6 @@
             font-size: 16px;
             cursor: pointer;
             margin: 0 5px;
-        }
-
-        .slide-number-container {
-            margin-bottom: -50px;
         }
     </style>
     <script>
