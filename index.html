@@ -182,8 +182,10 @@
     </div>
     <h2>Conference Presentation: Exploring the Boundaries of The Universe</h2>
      <div id="slide-container">
-        <img id="slide" src="slide1.jpg" alt="Slide 1" style="width: 100%; max-width: 800px;">
-        
+    <img id="slide" src="slide1.jpg" alt="Slide 1" style="width: 100%; max-width: 800px;">
+
+    <!-- Button and Slide number container -->
+    <div class="button-slide-container">
         <!-- Button container -->
         <div class="button-container">
             <button class="button" onclick="prevSlide()">Previous</button>
@@ -199,36 +201,39 @@
             <button class="button" onclick="showSlideNumber(5)">5</button>
         </div>
     </div>
-    <style>
-        /* Your existing styles */
+</div>
+ <style>
+    /* Your existing styles */
 
-        #slide-container {
-            text-align: center;
-            position: relative;
-            margin-top: 70px; /* Adjust as needed */
-        }
+    #slide-container {
+        text-align: center;
+        position: relative;
+        margin-top: 40px; /* Adjust as needed */
+    }
 
-        .button-container,
-        .slide-number-container {
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            margin-top: 50px; /* Adjust as needed */
-        }
+    .button-slide-container {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px; /* Adjust as needed */
+    }
 
-        .button-container .button,
-        .slide-number-container .button {
-            padding: 10px 20px;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            font-size: 16px;
-            cursor: pointer;
-            margin: 0 5px;
-        }
-    </style>
+    .button-container .button,
+    .slide-number-container .button {
+        padding: 10px 20px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        margin: 5px 0; /* Adjust as needed */
+    }
+</style>
     <script>
         var slideImages = ["slide1.jpg", "slide2.jpg", "slide3.jpg", "slide4.jpg", "slide5.jpg"];
         var currentSlide =0 ;
